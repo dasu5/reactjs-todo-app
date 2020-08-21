@@ -4,15 +4,30 @@ class TodoList extends Component {
   state = {};
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid py-2">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 offset-md-4 mt-5">
-              <h1 className="display-4">ToDo List</h1>
-              <input type="text" placeholder="Enter your task here"></input>
-              <button className="btn btn-primary ml-2">Add</button>
+      <div>
+        <div className="d-flex justify-content-center align-items-center container">
+          <div className="mb-3">
+            <div className="input-group">
+              <h1 className="display-2">ToDo List</h1>
             </div>
           </div>
+        </div>
+
+        <div className="d-flex justify-content-center align-items-center container">
+          <form className="mb-3">
+            <div className="input-group">
+              <input
+                type="text"
+                name="todoTask"
+                className="form-control"
+                placeholder="Enter your task here"
+                autoComplete="off"
+              ></input>
+              <button type="submit" className="btn btn-primary ml-2">
+                Add
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     );
